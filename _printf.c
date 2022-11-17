@@ -32,15 +32,14 @@ int _printf(const char *format, ...)
 			case 'd' || 'i':
 				count += print_string(va_arg(a, char *));
 				break;
+			case '\0':
+				return (-1);
 			default:
 				count += write(1, &format[--i], 1);
 			}
 		}
 		else
-		{
-			count++;
-			write(1, &format[i], 1);
-		}
+			count += write(1, &format[i], 1);
 		i++;
 	}
 	va_end(a);
