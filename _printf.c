@@ -16,8 +16,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			while (format[++i] == ' ')
-				;
 			switch (format[i])
 			{
 				case '%':
@@ -30,6 +28,7 @@ int _printf(const char *format, ...)
 					break;
 				case '\0':
 					return (-1);
+					break;
 				default:
 				{
 					count++;
