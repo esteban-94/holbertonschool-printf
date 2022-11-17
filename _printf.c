@@ -2,7 +2,7 @@
 /**
  * _printf - function that pritf string
  * @format: character string
- * Return: 
+ * Return: format specifier
  */
 int _printf(const char *format, ...)
 {
@@ -20,24 +20,20 @@ int _printf(const char *format, ...)
 				;
 			switch (format[i])
 			{
-				case '%':
-					count++;
-					write(1, "%", 1);
-					break;
-				case 'c':
-					count += print_char(va_arg(a, int));
-					break;
-				case 's':
-					count += print_string(va_arg(a, char*));
-					break;
-				case '\0':
-					return (-1);
-					break;
-				default:
-				{
-					count++;
-					write(1, &format[--i], 1);
-				}
+			case '%':
+				count += write(1, "%", 1);
+				break;
+			case 'c':
+				count += print_char(va_arg(a, int));
+				break;
+			case 's':
+				count += print_string(va_arg(a, char *));
+				break;
+			case 'd' || 'i':
+				count += print_string(va_arg(a, char *));
+				break;
+			default:
+				count += write(1, &format[--i], 1);
 			}
 		}
 		else

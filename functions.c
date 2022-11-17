@@ -1,22 +1,26 @@
 #include "main.h"
 /**
  * print_char - prints a character
- * @c: to probe
- * Return: 
+ * @c: char to print
+ * Return: 1 if extited correctly
  */
 int print_char(char c)
 {
 	write(1, &c, 1);
 	return (1);
 }
-
+/**
+ * print_string - prints a string
+ * @s: string to print
+ * Return: j if exited correctly
+ */
 int print_string(char *s)
 {
 	int j = 0;
 
 	if (s == NULL)
 	{
-		write (1, "(null)", 6);
+		write(1, "(null)", 6);
 		return (6);
 	}
 
