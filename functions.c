@@ -16,6 +16,6 @@ int print_string(char *s)
 
 	while (s[j] != '\0')
 		j++;
-	write(1, s, (j + 1));
+	write(1, s, j);
 	return (j);
 }
