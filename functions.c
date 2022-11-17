@@ -14,6 +14,12 @@ int print_string(char *s)
 {
 	int j = 0;
 
+	if (s == NULL)
+	{
+		write (1, "(null)", 6);
+		return (6);
+	}
+
 	while (s[j] != '\0')
 		j++;
 	write(1, s, j);
