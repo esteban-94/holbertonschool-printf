@@ -16,6 +16,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			while (format[i++] == ' ');
 			switch (format[i])
 			{
 				case '%':
@@ -26,6 +27,10 @@ int _printf(const char *format, ...)
 					count++;
 					print_char(va_arg(a, int));
 					break;
+				case 's':
+				count++;
+				print_string(va_arg(a, char*));
+				break;
 				case '\0':
 					return (-1);
 					break;

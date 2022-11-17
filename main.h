@@ -5,5 +5,6 @@
 
 int _printf(const char *format, ...); /*Prototype of _printf*/
 int print_char(char c);
+int print_string(char *s);
 
 #endif
