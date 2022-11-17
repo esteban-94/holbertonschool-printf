@@ -25,13 +25,11 @@ int _printf(const char *format, ...)
 					write(1, "%", 1);
 					break;
 				case 'c':
-					count++;
-					print_char(va_arg(a, int));
+					count += print_char(va_arg(a, int));
 					break;
 				case 's':
-				count++;
-				print_string(va_arg(a, char*));
-				break;
+					count += print_string(va_arg(a, char*));
+					break;
 				case '\0':
 					return (-1);
 					break;
