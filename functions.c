@@ -55,4 +55,9 @@ int print_number(int n)
 	}
 	write(1, &num[0], dig_count);
 	return (dig_count);
+	if (n == 0)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
 }
