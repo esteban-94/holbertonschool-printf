@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_char - prints a character
  * @c: char to print
@@ -28,4 +29,30 @@ int print_string(char *s)
 		j++;
 	write(1, s, j);
 	return (j);
+}
+/**
+ * print_number - print a number.
+ * @n: number tu print
+ * Return: dig_count if exited correctly.
+ */
+int print_number(int n)
+{
+	int n2, i = 0, dig_count = 0;
+	char num[] = "123456789", dig;
+	
+	n2 = n;
+	while (n2 != 0)
+	{
+		dig_count++;
+		n2 = n2 / 10;
+	}
+	n2 = n;
+	for (;i < dig_count; i++)
+	{
+		dig = '0' + (n2 % 10);
+		num[dig_count - i - 1] = dig;
+		n2 = n2 / 10;
+	}
+	write(1, &num[0], dig_count);
+	return (dig_count);
 }

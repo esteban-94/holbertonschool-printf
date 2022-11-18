@@ -29,8 +29,8 @@ int _printf(const char *format, ...)
 			case 's':
 				count += print_string(va_arg(a, char *));
 				break;
-			case 'd' || 'i':
-				count += print_string(va_arg(a, char *));
+			case 'd': case 'i':
+				count += print_number(va_arg(a, int));
 				break;
 			case '\0':
 				return (-1);

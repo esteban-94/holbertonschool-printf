@@ -7,5 +7,6 @@ int _printf(const char *format, ...); /*Prototype of _printf*/
 int print_char(char c);
 int print_string(char *s);
 int get_spec_format(char *);
+int print_number(int n);
 
 #endif
