@@ -40,6 +40,11 @@ int print_number(int n)
 	int n2, i = 0, dig_count = 0;
 	char num[] = "123456789", dig;
 	
+	if (n == 0)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
 	n2 = n;
 	while (n2 != 0)
 	{
@@ -55,9 +60,4 @@ int print_number(int n)
 	}
 	write(1, &num[0], dig_count);
 	return (dig_count);
-	if (n == 0)
-	{
-		write(1, "0", 1);
-		return (1);
-	}
 }
