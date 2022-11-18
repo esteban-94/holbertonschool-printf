@@ -37,7 +37,7 @@ int print_string(char *s)
  */
 int print_number(int n)
 {
-	int n2, j = 0, i = 0, dig_count = 0;
+	int n2 = n, n3 = n, j = 0, i = 0, dig_count = 0;
 	char num[] = "12345678910", dig;
 
 	if (n == 0)
@@ -45,7 +45,6 @@ int print_number(int n)
 		write(1, "0", 1);
 		return (1);
 	}
-	n2 = n;
 	while (n2 != 0)
 	{
 		dig_count++;
@@ -56,15 +55,14 @@ int print_number(int n)
 		write(1, "-2147483648", 11);
 		return (11);
 	}
-	n2 = n;
 	if (n < 0)
 	{
-		n2 = n * -1;
+		n3 = n * -1;
 		for (; j < dig_count; j++)
 		{
 			dig = '0' + (n2 % 10);
 			num[dig_count - j - 1] = dig;
-			n2 = n2 / 10;
+			n3 = n3 / 10;
 		}
 		write(1, "-", 1);
 		write(1, &num[0], dig_count);
