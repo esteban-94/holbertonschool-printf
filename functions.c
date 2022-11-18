@@ -38,7 +38,7 @@ int print_string(char *s)
 int print_number(int n)
 {
 	int n2, j = 0, i = 0, dig_count = 0;
-	char num[] = "123456789", dig;
+	char num[] = "12345678910", dig;
 
 	if (n == 0)
 	{
@@ -50,6 +50,11 @@ int print_number(int n)
 	{
 		dig_count++;
 		n2 = n2 / 10;
+	}
+	if (n == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return (11);
 	}
 	n2 = n;
 	if (n < 0)
