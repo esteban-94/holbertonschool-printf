@@ -60,7 +60,7 @@ int print_number(int n)
 		n3 = n * -1;
 		for (; j < dig_count; j++)
 		{
-			dig = '0' + (n2 % 10);
+			dig = '0' + (n3 % 10);
 			num[dig_count - j - 1] = dig;
 			n3 = n3 / 10;
 		}
