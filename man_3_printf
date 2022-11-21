@@ -1,0 +1,31 @@
+_printf - manual page
+
+Hi, this is the manual of a _printf function created for the Holberton project
+
+NAME
+
+_printf
+
+SYNOPSIS
+
+_printf FORMAT [ARGUMENT]...
+
+
+DESCRIPTION
+
+Print ARGUMENT(s) according to FORMAT
+
+%s : Print a string
+
+%c : Print a character
+
+%d : Print a number as a integer
+
+%i : Print a number as a integer
+RETURN VALUE 
+Return the length of the string impressed.
+
+AUTHORS
+
+Daniel Ortiz
+Juan Enriquez
