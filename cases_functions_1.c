@@ -107,14 +107,14 @@ int b_case(char *buf, int print_len, va_list val)
 
 	n1 = va_arg(val, int);
 	n2 = n1;
-	while (n2 != 0)
+	do
 	{
 		dig = '0' + (n2 % 2);
 		num[i] = dig;
 		i++;
 		dig_count++;
 		n2 = n2 / 2;
-	}
+	} while (n2 != 0);
 	i = 0;
 	while (i < dig_count)
 	{
