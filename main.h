@@ -1,9 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stdarg.h>//para la variadica
-#include <stdlib.h>//para el malloc
-#include <unistd.h>//para el write
-#include <stdio.h>//para el probar el printf
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 
 //struc definition for all cases
 struct cases
