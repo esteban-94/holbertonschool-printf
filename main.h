@@ -24,5 +24,8 @@ int s_case(va_list, char *, int);
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int (*get_format_especifier(char *arg))(va_list, char *, int);
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
+int replace(char *buffer, char *s, int print_len);
 
 #endif
