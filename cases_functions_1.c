@@ -46,7 +46,7 @@ int d_case(char *buf, int print_len, va_list val)
 		dig_count++;
 		n3 = n3 / 10;
 	} 
-	while (n2 != 0);
+	while (n3 != 0);
 	if (n1 < 0)
 		n2 = n1 * -1;
 	else
