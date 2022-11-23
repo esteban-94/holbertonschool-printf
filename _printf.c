@@ -10,7 +10,7 @@ int _printf(char *format, ...)
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		exit(1);
-    va_start(a, format);
+	va_start(a, format);
 	while (format && format[i])
 	{
 		if (format[i] != '%')

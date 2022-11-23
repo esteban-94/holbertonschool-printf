@@ -3,7 +3,7 @@
 int perc_case(char *buf, int print_len, va_list __attribute__((unused)) val)
 {
 	buf[0] = '%';
-    print_len++;
+	print_len++;
 	return (print_len);
 }
 
@@ -11,7 +11,7 @@ int perc_case(char *buf, int print_len, va_list __attribute__((unused)) val)
 int c_case(char *buf, int print_len, va_list val)
 {
 	buf[0] = va_arg(val, int);
-    print_len++;
+	print_len++;
 	return (print_len);
 }
 
@@ -19,7 +19,8 @@ int c_case(char *buf, int print_len, va_list val)
 int s_case(char *buf, int print_len, va_list val)
 {
 	char *s;
-	int i=0;
+	int i = 0;
+
 	s = va_arg(val, char*);
 	if (s == NULL)
 		s = "(null)";
@@ -27,7 +28,7 @@ int s_case(char *buf, int print_len, va_list val)
 	{
 		buf[i] = s[i];
 		i++;
-        print_len++;
+		print_len++;
 	}
 	return (print_len);
 }
@@ -41,12 +42,10 @@ int d_case(char *buf, int print_len, va_list val)
 
 	n1 = va_arg(val, int);
 	n3 = n1;
-	do
-	{
+	do{
 		dig_count++;
 		n3 = n3 / 10;
-	} 
-	while (n3 != 0);
+	}while (n3 != 0);
 	if (n1 < 0)
 		n2 = n1 * -1;
 	else

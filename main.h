@@ -10,11 +10,11 @@ struct cases
 {
 	char *allcases;
 	int (*selectioned_case)(char *buf, int print_len, va_list a);
-} ;
+};
 typedef struct cases print_cases;
 
 
-int _printf(char *format, ...); 
+int _printf(char *format, ...);
 
 
 int perc_case(char *, int, va_list);
