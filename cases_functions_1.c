@@ -112,8 +112,7 @@ int b_case(char *buf, int print_len, va_list val)
 
 	n1 = va_arg(val, int);
 	n2 = n1;
-	do
-	{
+	do {
 		dig = '0' + (n2 % 2);
 		num[i] = dig;
 		i++;

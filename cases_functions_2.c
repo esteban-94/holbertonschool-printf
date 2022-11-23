@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _case - print a unsigned number.
+ * u_case - print a unsigned number.
  * @buf: number buf.
  * @print_len: string length.
  * @val: va_list argument.
@@ -28,11 +28,10 @@ int u_case(char *buf, int print_len, va_list val)
 		num[dig_count - i - 1] = dig;
 		n2 = n2 / 10;
 	}
-    for (i = 0; i < dig_count; i++)
+	for (i = 0; i < dig_count; i++)
 	{
 		buf[i] = num[i];
 		print_len++;
 	}
-	
 	return (print_len);
 }
