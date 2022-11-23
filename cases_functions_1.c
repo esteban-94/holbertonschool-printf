@@ -97,8 +97,13 @@ int d_case(char *buf, int print_len, va_list val)
 	}
 	return (print_len);
 }
-
-
+/**
+ * b_case - print a binary number.
+ * @buf: binary buf.
+ * @print_len: string length.
+ * @val: va_list argument.
+ * Return: length to print.
+*/
 int b_case(char *buf, int print_len, va_list val)
 {
 	int n1;

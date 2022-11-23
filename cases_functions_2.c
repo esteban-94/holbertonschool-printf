@@ -1,6 +1,11 @@
 #include "main.h"
-
-
+/**
+ * _case - print a unsigned number.
+ * @buf: number buf.
+ * @print_len: string length.
+ * @val: va_list argument.
+ * Return: length to print.
+*/
 int u_case(char *buf, int print_len, va_list val)
 {
 	int n1;
