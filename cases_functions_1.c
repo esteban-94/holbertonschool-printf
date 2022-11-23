@@ -52,13 +52,18 @@ int d_case(char *buf, int print_len, va_list val)
 	}
 	if (n1 < 0)
 	{
+		buf[0] = '-';
+		print_len++;
 		n2 = n1 * -1;
 		for (; i < dig_count; i++)
 		{
 			dig = '0' + (n2 % 10);
 			num[dig_count - i - 1] = dig;
 			n2 = n2 / 10;
-			buf[i] = '-';
+		}
+		for (i = 0; i < dig_count; i++)
+		{
+			buf[i + 1] = num[i];
 			print_len++;
 		}
 	}
