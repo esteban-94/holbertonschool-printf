@@ -48,24 +48,3 @@ int (*get_format_especifier(char *arg))(va_list, char *, int)
 	}
 	return (NULL);
 }
-
-
-int _strlen(char *s)
-{
-	int i=0;
-
-	while (*(s + i) != '\0')
-		i++;
-	return (i);
-}
-
-
-char *_strcpy(char *dest, char *src)
-{
-	int len=0, i;
-
-	len = _strlen(src);
-	for (i = 0; i <= len; i++)
-		*(dest + i) = *(src + i);
-	return (dest);
-}
