@@ -1,31 +1,54 @@
-_printf - manual page
+.TH man 1 "24 nov 2022" "1.0" "_printf man page"
 
-Hi, this is the manual of a _printf function created for the Holberton project
+.SH NAME
 
-NAME
+_printf - prints the string to standard output.
 
-_printf
-
-SYNOPSIS
+.SH SYNOPSIS
 
 _printf FORMAT [ARGUMENT]...
 
+.SH DESCRIPTION
 
-DESCRIPTION
+The function reads a string of characters with or without a specific format and then prints it to the standard output.
 
-Print ARGUMENT(s) according to FORMAT
+.SH FORMAT OPTIONS
 
-%s : Print a string
+The formats that this function receives are:
 
-%c : Print a character
+	%s : Print a string.
 
-%d : Print a number as a integer
+	%c : Print a character.
 
-%i : Print a number as a integer
-RETURN VALUE 
+	%d : Print a number as a integer.
+
+	%i : Print a number as a integer.
+
+.SH RETURN VALUE 
+
 Return the length of the string impressed.
 
-AUTHORS
+.SH EXAMPLE
 
-Daniel Ortiz
-Juan Enriquez
+	int main()
+
+	{
+
+		_printf(“%d”, 1024);
+
+	}
+
+Output:
+
+	1024
+
+.SH AUTHORS
+
+@Dannyelgeek
+
+- https://github.com/Dannyelgeek
+
+@esteban-94
+
+- https://github.com/esteban-94	
+
