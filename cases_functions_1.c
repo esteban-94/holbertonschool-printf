@@ -35,8 +35,7 @@ int s_case(char *buf, int print_len, va_list val)
 
 int d_case(char *buf, int print_len, va_list val)
 {
-	int n1;
-	unsigned int n2, i = 0, dig_count = 0;
+	unsigned int n1, n2, i = 0, dig_count = 0;
 	char num[10], dig;
 
 	n1 = va_arg(val, int);
