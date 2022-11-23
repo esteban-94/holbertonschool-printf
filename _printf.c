@@ -35,7 +35,7 @@ int _printf(char *format, ...)
 		
 	}
 	write(STDOUT_FILENO, buffer, print_len);
-	free(buffer);
 	va_end(a);
+	free(buffer);
 	return (print_len);
 }
