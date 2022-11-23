@@ -6,7 +6,7 @@ int _printf(char *format, ...)
 	unsigned int print_len = 0;
 	va_list a;
 	char buffer[5000];
-	int (*selectioned_case)(va_list, char *, int);
+	int (*selectioned_case)(char *, int, va_list);
 
     va_start(a, format);
 	while (format && format[i])
@@ -21,7 +21,7 @@ int _printf(char *format, ...)
 			selectioned_case = get_format_especifier(&(format[i + 1]));
 			if (selectioned_case != NULL)
 			{
-				print_len = selectioned_case(a, &buffer[print_len], print_len);
+				print_len = selectioned_case(&buffer[print_len], print_len, a);
 				i++;
 			}
 			else

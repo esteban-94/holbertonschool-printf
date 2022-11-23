@@ -31,7 +31,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 }
 
 
-int (*get_format_especifier(char *arg))(va_list, char *, int)
+int (*get_format_especifier(char *arg))(char *, int, va_list)
 {
 	int i = 0;
 	print_cases formats[] = {

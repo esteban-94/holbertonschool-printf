@@ -9,7 +9,7 @@
 struct cases
 {
 	char *allcases;
-	int (*selectioned_case)(va_list a, char *buf, int print_len);
+	int (*selectioned_case)(char *buf, int print_len, va_list a);
 } ;
 typedef struct cases print_cases;
 
@@ -17,12 +17,12 @@ typedef struct cases print_cases;
 int _printf(char *format, ...); 
 
 
-int perc_case(va_list, char *, int);
-int c_case(va_list, char *, int);
-int s_case(va_list, char *, int);
+int perc_case(char *, int, va_list);
+int c_case(char *, int, va_list);
+int s_case(char *, int, va_list);
 
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-int (*get_format_especifier(char *arg))(va_list, char *, int);
+int (*get_format_especifier(char *arg))(char *, int, va_list);
 
 #endif
