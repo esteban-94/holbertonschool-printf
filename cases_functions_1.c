@@ -97,3 +97,30 @@ int d_case(char *buf, int print_len, va_list val)
 	}
 	return (print_len);
 }
+
+
+int b_case(char *buf, int print_len, va_list val)
+{
+	int n1;
+	unsigned int n2, i = 0, dig_count = 0;
+	char num[33], dig;
+
+	n1 = va_arg(val, int);
+	n2 = n1;
+	while (n2 != 0)
+	{
+		dig = '0' + (n2 % 2);
+		num[i] = dig;
+		i++;
+		dig_count++;
+		n2 = n2 / 2;
+	}
+	i = 0;
+	while (i < dig_count)
+	{
+		buf[i] = num[dig_count - i - 1];
+		i++;
+		print_len++;
+	}
+	return (print_len);
+}
