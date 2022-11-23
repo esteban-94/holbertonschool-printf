@@ -21,6 +21,8 @@ int s_case(char *buf, int print_len, va_list val)
 	char *s;
 	int i=0;
 	s = va_arg(val, char*);
+	if (s == NULL)
+		s = "(null)";
 	while (s[i] != '\0')
 	{
 		buf[i] = s[i];

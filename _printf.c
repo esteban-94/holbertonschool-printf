@@ -33,7 +33,6 @@ int _printf(char *format, ...)
 			}
 		}
 		i++;
-		
 	}
 	write(STDOUT_FILENO, buffer, print_len);
 	va_end(a);
