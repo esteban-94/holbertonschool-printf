@@ -35,7 +35,13 @@ int u_case(char *buf, int print_len, va_list val)
 	}
 	return (print_len);
 }
-
+/**
+ * o_case - print an octal number.
+ * @buf: octal number buf.
+ * @print_len: string length.
+ * @val: va_list argument.
+ * Return: length to print.
+*/
 int o_case(char *buf, int print_len, va_list val)
 {
 	int n1;
@@ -60,8 +66,13 @@ int o_case(char *buf, int print_len, va_list val)
 	}
 	return (print_len);
 }
-
-
+/**
+ * x_case - print an hex number.
+ * @buf: hex number buf.
+ * @print_len: string length.
+ * @val: va_list argument.
+ * Return: length to print.
+*/
 int x_case(char *buf, int print_len, va_list val)
 {
 	int n1;
@@ -100,35 +111,15 @@ int x_case(char *buf, int print_len, va_list val)
 	}
 	return (print_len);
 }
+/**
+ * X_case - print an upper hex number.
+ * @buf: hex number buf.
+ * @print_len: string length.
+ * @val: va_list argument.
+ * Return: length to print.
+*/
 
-
-int o_case(char *buf, int print_len, va_list val)
-{
-	int n1;
-	unsigned int n2, i = 0, dig_count = 0;
-	char num[33], dig;
-
-	n1 = va_arg(val, int);
-	n2 = n1;
-	do {
-		dig = '0' + (n2 % 8);
-		num[i] = dig;
-		i++;
-		dig_count++;
-		n2 = n2 / 8;
-	} while (n2 != 0);
-	i = 0;
-	while (i < dig_count)
-	{
-		buf[i] = num[dig_count - i - 1];
-		i++;
-		print_len++;
-	}
-	return (print_len);
-}
-
-
-int x_case(char *buf, int print_len, va_list val)
+int X_case(char *buf, int print_len, va_list val)
 {
 	int n1;
 	unsigned int n2, dig1, i = 0, j, dig_count = 0;
