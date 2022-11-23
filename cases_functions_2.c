@@ -9,7 +9,7 @@
 int u_case(char *buf, int print_len, va_list val)
 {
 	int n1;
-	unsigned int n2, i = 0, dig_count = 0;
+	unsigned int n2, i = 0, dig_count = 0, max_number = 4294967295;
 	char num[10], dig;
 
 	n1 = va_arg(val, int);
@@ -19,7 +19,7 @@ int u_case(char *buf, int print_len, va_list val)
 		n2 = n2 / 10;
 	} while (n2 != 0);
 	if (n1 < 0)
-		n2 = n1 * -1;
+		n2 = max_number + n1 + 1;
 	else
 		n2 = n1;
 	for (; i < dig_count; i++)
