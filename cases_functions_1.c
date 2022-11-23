@@ -39,28 +39,27 @@ int d_case(char *buf, int print_len, va_list val)
 	char num[10], dig;
 
 	n1 = va_arg(val, int);
-	if (n1 == 0)
-	{
-		buf[0] = '0';
-		return (print_len + 1);
-	}
 	n2 = n1;
-	while (n2 != 0)
+	do
 	{
 		dig_count++;
+		n2 = n2 / 10;
+	} 
+	while (n2 != 0);
+	if (n1 < 0)
+		n2 = n1 * -1;
+	else
+		n2 = n1;
+	for (; i < dig_count; i++)
+	{
+		dig = '0' + (n2 % 10);
+		num[dig_count - i - 1] = dig;
 		n2 = n2 / 10;
 	}
 	if (n1 < 0)
 	{
 		buf[0] = '-';
 		print_len++;
-		n2 = n1 * -1;
-		for (; i < dig_count; i++)
-		{
-			dig = '0' + (n2 % 10);
-			num[dig_count - i - 1] = dig;
-			n2 = n2 / 10;
-		}
 		for (i = 0; i < dig_count; i++)
 		{
 			buf[i + 1] = num[i];
@@ -69,13 +68,6 @@ int d_case(char *buf, int print_len, va_list val)
 	}
 	else
 	{
-		n2 = n1;
-		for (; i < dig_count; i++)
-		{
-			dig = '0' + (n2 % 10);
-			num[dig_count - i - 1] = dig;
-			n2 = n2 / 10;
-		}
 		for (i = 0; i < dig_count; i++)
 		{
 			buf[i] = num[i];
