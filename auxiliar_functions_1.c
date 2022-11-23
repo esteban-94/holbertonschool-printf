@@ -37,10 +37,12 @@ int (*get_format_especifier(char *arg))(char *, int, va_list)
 	print_cases formats[] = {
 		{"%", perc_case},
 		{"c", c_case},
-		{"s", s_case}
+		{"s", s_case},
+		{"i", d_case},
+		{"d", d_case}
 		};
 
-	while (i < 3)
+	while (i < 5)
 	{
 		if (*arg == *(formats[i]).allcases)
 			return ((formats[i].selectioned_case));

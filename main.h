@@ -20,6 +20,7 @@ int _printf(char *format, ...);
 int perc_case(char *, int, va_list);
 int c_case(char *, int, va_list);
 int s_case(char *, int, va_list);
+int d_case(char *, int, va_list);
 
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
