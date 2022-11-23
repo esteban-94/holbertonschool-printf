@@ -8,6 +8,8 @@ int _printf(char *format, ...)
 	char buffer[5000];
 	int (*selectioned_case)(char *, int, va_list);
 
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		exit(1);
     va_start(a, format);
 	while (format && format[i])
 	{
