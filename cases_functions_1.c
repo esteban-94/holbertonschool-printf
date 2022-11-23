@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * perc_case - print the '%' character.
+ * @buf: character buffer.
+ * @print_len: string length.
+ * Return: length to print.
+*/
 int perc_case(char *buf, int print_len, va_list __attribute__((unused)) val)
 {
 	buf[0] = '%';
