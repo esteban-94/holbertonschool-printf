@@ -5,10 +5,9 @@ int _printf(char *format, ...)
 	int i = 0;
 	unsigned int print_len = 0;
 	va_list a;
-	char *buffer;
+	char buffer[5000];
 	int (*selectioned_case)(va_list, char *, int);
 
-    buffer = malloc(sizeof(char) + 5000);
     va_start(a, format);
 	while (format && format[i])
 	{
