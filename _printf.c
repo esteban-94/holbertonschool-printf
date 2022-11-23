@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * _printf - print an argument in the standard output.
+ * @format: string format to print.
+ * Return: print_len if exited correctly.
+*/
 int _printf(char *format, ...)
 {
 	int i = 0;
