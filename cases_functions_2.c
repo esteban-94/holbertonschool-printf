@@ -65,9 +65,9 @@ int o_case(char *buf, int print_len, va_list val)
 int x_case(char *buf, int print_len, va_list val)
 {
 	int n1;
-	unsigned int n2, dig1, i = 0, j, dig_count = 0, numb[]={10, 11, 12, 13, 14, 15};
-	unsigned int max_number = 4294967295;
-	char num[33], letters[]={'a', 'b', 'c', 'd', 'e', 'f'}, dig;
+	unsigned int n2, dig1, i = 0, j, dig_count = 0;
+	unsigned int max_number = 4294967295, numb[] = {10, 11, 12, 13, 14, 15};
+	char num[33], letters[] = {'a', 'b', 'c', 'd', 'e', 'f'}, dig;
 
 	n1 = va_arg(val, int);
 	if (n1 < 0)
@@ -78,11 +78,11 @@ int x_case(char *buf, int print_len, va_list val)
 		dig1 = n2 % 16;
 			if (dig1 > 9)
 			{
-				for(j = 0; j < 6; j++)
+				for (j = 0; j < 6; j++)
 				{
 					if (dig1 == numb[j])
 						dig = letters[j];
-				}	
+				}
 			}
 			else
 				dig = '0' + dig1;
