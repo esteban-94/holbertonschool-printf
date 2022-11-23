@@ -35,11 +35,10 @@ int s_case(char *buf, int print_len, va_list val)
 
 int d_case(char *buf, int print_len, va_list val)
 {
-	int n1, n2, n3, j = 0, i = 0, dig_count = 0;
-	char num[] = "12345678910", dig;
+	int n1, n2, i = 0, dig_count = 0;
+	char dig;
 
 	n1 = va_arg(val, int);
-	
 	if (n1 == 0)
 	{
 		buf[0] = '0';
@@ -51,23 +50,28 @@ int d_case(char *buf, int print_len, va_list val)
 		dig_count++;
 		n2 = n2 / 10;
 	}
+	n2 = n1;
 	if (n1 < 0)
 	{
-		n3 = n1 * -1;
-		for (; j < dig_count; j++)
+		n2 = n1 * -1;
+		for (; i < dig_count; i++)
 		{
-			dig = '0' + (n3 % 10);
-			num[dig_count - j - 1] = dig;
-			n3 = n3 / 10;
+			dig = '0' + (n2 % 10);
+			buf[dig_count - i - 1] = dig;
+			n2 = n2 / 10;
+			print_len++;
 		}
-		return (dig_count + 1);
+		return (print_len);
 	}
-	n2 = n1;
-	for (; i < dig_count; i++)
+	else
 	{
-		dig = '0' + (n2 % 10);
-		num[dig_count - i - 1] = dig;
-		n2 = n2 / 10;
+		n2 = n1;
+		for (; i < dig_count; i++)
+		{
+			dig = '0' + (n2 % 10);
+			buf[dig_count - i - 1] = dig;
+			n2 = n2 / 10;
+		}
 	}
 	return (print_len);
 }
