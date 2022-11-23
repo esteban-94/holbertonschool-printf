@@ -1,5 +1,11 @@
 #include "main.h"
-
+/**
+ * _realloc - reallocation memory of the buffer.
+ * @ptr: pointer to the memory.
+ * @old_size: old memory size.
+ * @new_size: new memory size.
+ * Return: p if memory is free.
+*/
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *p;
@@ -29,8 +35,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	free(ptr);
 	return (p);
 }
-
-
+/**
+ * get_format_especifier - get specifier for _printf function.
+ * @arg: format argument.
+ * Return: the specified format.
+*/
 int (*get_format_especifier(char *arg))(char *, int, va_list)
 {
 	int i = 0;
