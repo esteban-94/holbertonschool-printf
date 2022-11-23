@@ -9,7 +9,7 @@ int _printf(char *format, ...)
 	int i = 0;
 	unsigned int print_len = 0;
 	va_list a;
-	char buffer[1500];
+	char buffer[2000];
 	int (*selectioned_case)(char *, int, va_list);
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
