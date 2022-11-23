@@ -8,7 +8,7 @@ int _printf(char *format, ...)
 	char *buffer;
 	int (*selectioned_case)(va_list, char *, int);
 
-    buffer = malloc(sizeof(char) + 1000);
+    buffer = malloc(sizeof(char) + 5000);
     va_start(a, format);
 	while (format && format[i])
 	{
