@@ -3,6 +3,7 @@
  * perc_case - print the '%' character.
  * @buf: character buffer.
  * @print_len: string length.
+ * @val: va_list argument.
  * Return: length to print.
 */
 int perc_case(char *buf, int print_len, va_list __attribute__((unused)) val)
@@ -11,16 +12,26 @@ int perc_case(char *buf, int print_len, va_list __attribute__((unused)) val)
 	print_len++;
 	return (print_len);
 }
-
-
+/**
+ * c_case - print a character.
+ * @buf: character buf.
+ * @print_len: string length.
+ * @val: va_list argument.
+ * Return: length to print.
+*/
 int c_case(char *buf, int print_len, va_list val)
 {
 	buf[0] = va_arg(val, int);
 	print_len++;
 	return (print_len);
 }
-
-
+/**
+ * s_case - print a string.
+ * @buf: string buf.
+ * @print_len: string length.
+ * @val: va_list argument.
+ * Return: length to print.
+*/
 int s_case(char *buf, int print_len, va_list val)
 {
 	char *s;
@@ -37,8 +48,13 @@ int s_case(char *buf, int print_len, va_list val)
 	}
 	return (print_len);
 }
-
-
+/**
+ * d_case - print a integer.
+ * @buf: integer buf.
+ * @print_len: string length.
+ * @val: va_list argument.
+ * Return: length to print.
+*/
 int d_case(char *buf, int print_len, va_list val)
 {
 	int n1, n3;
