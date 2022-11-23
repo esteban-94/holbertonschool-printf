@@ -50,10 +50,11 @@ int (*get_format_especifier(char *arg))(char *, int, va_list)
 		{"i", d_case},
 		{"d", d_case},
 		{"b", b_case},
-		{"u", u_case}
+		{"u", u_case},
+		{"o", o_case}
 		};
 
-	while (i < 7)
+	while (i < 8)
 	{
 		if (*arg == *(formats[i]).allcases)
 			return ((formats[i].selectioned_case));
