@@ -8,13 +8,12 @@ int _printf(char *format, ...)
 	char *buffer;
 	int (*selectioned_case)(va_list, char *, int);
 
-    buffer = malloc(sizeof(char) + 1);
+    buffer = malloc(sizeof(char) + 1000);
     va_start(a, format);
 	while (format && format[i])
 	{
 		if (format[i] != '%')
 		{
-			buffer = _realloc(buffer, print_len, (print_len + 1));
 			buffer[print_len] = format[i];
 			print_len++;
 		}
