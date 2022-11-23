@@ -24,6 +24,7 @@ int d_case(char *, int, va_list);
 int b_case(char *, int, va_list);
 int u_case(char *, int, va_list);
 int o_case(char *, int, va_list);
+int x_case(char *, int, va_list);
 
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
