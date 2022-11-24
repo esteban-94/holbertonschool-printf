@@ -37,6 +37,7 @@ The formats that this function receives are:
 %x : prints a number as a hex.
 
 %X : prints a number as an uppercase hex.
+
 RETURN VALUE 
 Return the length of the string impressed.
 
