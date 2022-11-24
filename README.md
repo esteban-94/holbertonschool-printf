@@ -58,6 +58,6 @@ Output:
 
 	1024
 
-Flowchard:
+Flowchart:
 
 <img src=https://imgur.com/UF1CgaX.png/>
