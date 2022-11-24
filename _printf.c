@@ -9,11 +9,12 @@ int _printf(char *format, ...)
 	int i = 0;
 	unsigned int print_len = 0;
 	va_list a;
-	char buffer[2000];
+	char* buffer;
 	int (*selectioned_case)(char *, int, va_list);
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		exit(1);
+	buffer = malloc(sizeof(char) + 2000);
 	va_start(a, format);
 	while (format && format[i])
 	{
@@ -40,5 +41,6 @@ int _printf(char *format, ...)
 	}
 	write(STDOUT_FILENO, buffer, print_len);
 	va_end(a);
+	free(buffer);
 	return (print_len);
 }
