@@ -1,47 +1,44 @@
 #include "main.h"
 /**
- * _printf - function that pritf string
- * @format: character string
- * Return: format specifier
- */
-int _printf(const char *format, ...)
+ * _printf - print an argument in the standard output.
+ * @format: string format to print.
+ * Return: print_len if exited correctly.
+*/
+int _printf(char *format, ...)
 {
+	int i = 0;
+	unsigned int print_len = 0;
 	va_list a;
-	int count = 0, i = 0;
+	char buffer[2000];
+	int (*selectioned_case)(char *, int, va_list);
 
-	if (format == NULL)
-		return (-1);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		exit(1);
 	va_start(a, format);
-	while (format[i])
+	while (format && format[i])
 	{
-		if (format[i] == '%')
+		if (format[i] != '%')
 		{
-			while (format[i++] == ' ')
-				;
-			switch (format[i])
-			{
-			case '%':
-				count += write(1, "%", 1);
-				break;
-			case 'c':
-				count += print_char(va_arg(a, int));
-				break;
-			case 's':
-				count += print_string(va_arg(a, char *));
-				break;
-			case 'd': case 'i':
-				count += print_number(va_arg(a, int));
-				break;
-			case '\0':
-				return (-1);
-			default:
-				count += write(1, &format[--i], 1);
-			}
+			buffer[print_len] = format[i];
+			print_len++;
 		}
 		else
-			count += write(1, &format[i], 1);
+		{
+			selectioned_case = get_format_especifier(&(format[i + 1]));
+			if (selectioned_case != NULL)
+			{
+				print_len = selectioned_case(&buffer[print_len], print_len, a);
+				i++;
+			}
+			else
+			{
+				buffer[print_len] = format[i];
+				print_len++;
+			}
+		}
 		i++;
 	}
+	write(STDOUT_FILENO, buffer, print_len);
 	va_end(a);
-	return (count);
+	return (print_len);
 }

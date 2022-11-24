@@ -1,12 +1,34 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
+#include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 
-int _printf(const char *format, ...); /*Prototype of _printf*/
-int print_char(char c);
-int print_string(char *s);
-int get_spec_format(char *);
-int print_number(int n);
+
+struct cases
+{
+	char *allcases;
+	int (*selectioned_case)(char *buf, int print_len, va_list a);
+};
+typedef struct cases print_cases;
+
+
+int _printf(char *format, ...);
+
+
+int perc_case(char *, int, va_list);
+int c_case(char *, int, va_list);
+int s_case(char *, int, va_list);
+int d_case(char *, int, va_list);
+int b_case(char *, int, va_list);
+int u_case(char *, int, va_list);
+int o_case(char *, int, va_list);
+int x_case(char *, int, va_list);
+int X_case(char *, int, va_list);
+
+
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+int (*get_format_especifier(char *arg))(char *, int, va_list);
 
 #endif
