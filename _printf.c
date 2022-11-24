@@ -19,15 +19,15 @@ int _printf(char *format, ...)
 	{
 		if (format[i] != '%')
 		{
+			buffer = realloc(buffer, (print_len + 2));
 			buffer[print_len] = format[i];
 			print_len++;
-			buffer = realloc(buffer, (print_len + 1));
 		}
 		else
 		{
+			buffer = realloc(buffer, (print_len + 2));
 			buffer[print_len] = format[i];
 			print_len++;
-			buffer = realloc(buffer, (print_len + 1));
 		}
 		i++;
 	}
