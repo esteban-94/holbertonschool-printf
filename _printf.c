@@ -14,7 +14,7 @@ int _printf(char *format, ...)
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		exit(1);
-	buffer = malloc(sizeof(char) + 2000);
+	buffer = malloc(sizeof(char) + 100);
 	va_start(a, format);
 	while (format && format[i])
 	{
