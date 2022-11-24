@@ -1,3 +1,5 @@
+<img src=https://imgur.com/HBL8i9J.png/>
+
 Holberton _printf project.
 
 _printf - manual page
