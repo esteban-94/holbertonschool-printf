@@ -46,7 +46,4 @@ Output:
 
 Flowchard:
 
-```mermaid
-graph LR
-A(_printf) --> B[1] --> C[2]
-```
+<img src=https://app.code2flow.com/Xspqt4xE3Usd.code.png/>
