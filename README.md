@@ -51,5 +51,4 @@ graph LR
 A(_printf) --> B((Circle))
 B --> C{Rhombus}
 C --> E{E}
-E --> f{Rhombus}
 ```
