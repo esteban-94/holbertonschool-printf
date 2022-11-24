@@ -1,4 +1,4 @@
-<img src="https://imgur.com/HBL8i9J.png" width=auto height=auto/>
+<img src="https://imgur.com/HBL8i9J.png" width=1012 height=auto/>
 
 Holberton _printf project.
 
