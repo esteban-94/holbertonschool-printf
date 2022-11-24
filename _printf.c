@@ -21,13 +21,13 @@ int _printf(char *format, ...)
 		{
 			buffer[print_len] = format[i];
 			print_len++;
-			realloc(buffer, (print_len + 1));
+			buffer = realloc(buffer, (print_len + 1));
 		}
 		else
 		{
 			buffer[print_len] = format[i];
 			print_len++;
-			realloc(buffer, (print_len + 1));
+			buffer = realloc(buffer, (print_len + 1));
 		}
 		i++;
 	}
