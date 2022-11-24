@@ -25,17 +25,8 @@ int _printf(char *format, ...)
 		}
 		else
 		{
-			selectioned_case = get_format_especifier(&(format[i + 1]));
-			if (selectioned_case != NULL)
-			{
-				print_len = selectioned_case(&buffer[print_len], print_len, a);
-				i++;
-			}
-			else
-			{
-				buffer[print_len] = format[i];
-				print_len++;
-			}
+			buffer[print_len] = format[i];
+			print_len++;
 		}
 		i++;
 	}
