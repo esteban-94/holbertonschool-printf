@@ -1,3 +1,5 @@
+<img src=https://imgur.com/HBL8i9J.png/>
+
 Holberton _printf project.
 
 _printf - manual page
@@ -27,7 +29,19 @@ The formats that this function receives are:
 %d : Print a number as a integer
 
 %i : Print a number as a integer
+
+%b : prints a number as a binary.
+
+%u : print an unsigned number.
+
+%o : prints a number as an octal.
+
+%x : prints a number as a hex.
+
+%X : prints a number as an uppercase hex.
+
 RETURN VALUE 
+
 Return the length of the string impressed.
 
 EXAMPLE
@@ -46,7 +60,4 @@ Output:
 
 Flowchard:
 
-```mermaid
-A(_printf) --> B((Circle))
-B --> C{Rhombus}
-```
+<img src=https://imgur.com/UF1CgaX.png/>
