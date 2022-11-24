@@ -47,8 +47,6 @@ Output:
 Flowchard:
 
 ```mermaid
-graph LR
 A(_printf) --> B((Circle))
 B --> C{Rhombus}
-C --> E{E}
 ```
