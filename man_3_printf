@@ -24,6 +24,16 @@ The formats that this function receives are:
 
 	%i : Print a number as a integer.
 
+	%b : prints a number as a binary.
+
+	%u : print an unsigned number.
+
+	%o : prints a number as an octal.
+
+	%x : prints a number as a hex.
+
+	%X : prints a number as an uppercase hex.
+
 .SH RETURN VALUE 
 
 Return the length of the string impressed.
