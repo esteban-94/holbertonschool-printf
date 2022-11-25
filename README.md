@@ -1,4 +1,4 @@
-<img src=https://imgur.com/HBL8i9J.png/>
+<img src="https://imgur.com/HBL8i9J.png" width=1012 height=auto/>
 
 Holberton _printf project.
 
@@ -58,6 +58,6 @@ Output:
 
 	1024
 
-Flowchard:
+Flowchart:
 
 <img src=https://imgur.com/UF1CgaX.png/>
